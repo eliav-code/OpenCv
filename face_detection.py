@@ -12,7 +12,7 @@ while True:
     # cv.imshow('Camera', gray)
     # cv.imshow('Video', frame)
     faces_rect = haar_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=4)
-    print(f'Number of faces found = {len(faces_rect)}')
+    print(f'Number of faces found = {len(faces_rect)}')  # print the number of the faces who are recognized.
     for (x, y, w, h) in faces_rect:  # Draw the rectangle on the screen
         cv.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), thickness=2)
     cv.imshow('Detected faces', frame)
